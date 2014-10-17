@@ -1,4 +1,5 @@
-#Created by Eli Foster.
+# Created by Eli Foster.
+# Version: 0.1
 
 print("Welcome to the Percent Error calculator\n")
 exp = float(input("Please input the experimental value and press enter\n"))
