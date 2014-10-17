@@ -23,21 +23,25 @@ def calculate():
     res3 = (res2*100)
     print("Percent error: " + str(res3))
 
-    return;
+def perform():
+    calculate()
+    question()
 
-calculate();
+def question():
+    q = input("To quit, type \'leave\', if not, type \'stay\'\n")
+    print("Note that the single quotes are required, because Python is kind of stupid")
+    if q==x:
+        print("Fine. I'll go change my relationship status and cry now.\n")
+        sys.exit()
+    if q==y:
+        print("I love you too.")
+        perform()
 
-q = input("To quit, type 'leave', if not, type 'stay'\n")
-print("Note that the single quotes are required, because Python is kind of stupid")
-if q==x:
-    print("Fine. I'll go change my relationship status and cry now.\n")
-    sys.exit()
-if q==y:
-    print("I love you too.")
-    calculate();
-
+perform()
 '''
 == CHANGELOG ==
+=== 0.3 ===
+* Fixed looping.
 === 0.2 ===
 * Added option to choose whether you want to stay in the program or not.
 * Changed pre-calculation text, and added a new line
