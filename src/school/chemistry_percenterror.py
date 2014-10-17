@@ -1,10 +1,10 @@
 # Created by Eli Foster.
-# Version: 0.2-dev
+# Version: 0.2
 
 import sys
 
-quit_msg = "leave"
-stay_msg = "stay"
+x="leave"
+y="stay"
 
 print("Welcome to the Percent Error calculator\n")
 
@@ -28,18 +28,21 @@ def calculate():
 calculate();
 
 q = input("To quit, type 'leave', if not, type 'stay'\n")
-if q==quit_msg:
+print("Note that the single quotes are required, because Python is kind of stupid")
+if q==x:
     print("Fine. I'll go change my relationship status and cry now.\n")
     sys.exit()
-if q==stay_msg:
+if q==y:
     print("I love you too.")
     calculate();
 
 '''
 == CHANGELOG ==
 === 0.2 ===
+* Added option to choose whether you want to stay in the program or not.
 * Changed pre-calculation text, and added a new line
 * Cleaned up code a bit
+
 === 0.1 ===
 * Initial build
 '''
