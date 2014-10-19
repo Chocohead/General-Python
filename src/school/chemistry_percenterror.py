@@ -1,10 +1,10 @@
 # Created by Eli Foster.
-# Version: 0.3
+# Version: 0.4
 
 import sys
 
-x="leave"
-y="stay"
+x=0
+y=1
 
 print("Welcome to the Percent Error calculator\n")
 
@@ -22,26 +22,34 @@ def calculate():
     res2 = (res1/the)
     res3 = (res2*100)
     print("Percent error: " + str(res3))
+    return
 
 def perform():
     calculate()
     question()
+    return
 
 def question():
-    q = input("To quit, type \'leave\', if not, type \'stay\'\n")
-    print("Note that the single quotes are required, because Python is kind of stupid")
+    q = input("To quit, type 0, if not, type 1\n")
     if q==x:
         print("Fine. I'll go change my relationship status and cry now.\n")
         sys.exit()
     if q==y:
         print("I love you too.")
         perform()
+    return
 
 perform()
+
 '''
 == CHANGELOG ==
+=== 0.4 ===
+* Changed stay to 1 and leave to 0
+* Added return statements to help performance.
+
 === 0.3 ===
 * Fixed looping.
+
 === 0.2 ===
 * Added option to choose whether you want to stay in the program or not.
 * Changed pre-calculation text, and added a new line
