@@ -1,6 +1,7 @@
 # Created by Eli Foster
 # Version 0.1
 
+import sys
 import time
 
 l=0
@@ -75,7 +76,8 @@ def main():
     if question==m:
         mass()
     if question==q:
-        print "noep"
+        print ":("
+        sys.exit()
 
 print("Welcome to the Metric Conversion Calculator.\n This program will convert a base unit (gram, liter, or meter).")
 main()
