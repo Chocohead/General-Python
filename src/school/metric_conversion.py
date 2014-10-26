@@ -1,4 +1,5 @@
-__author__ = 'elijahfoster-wysocki'
+# Created by Eli Foster
+# Version 0.1
 
 import time
 
