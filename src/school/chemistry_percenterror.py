@@ -10,18 +10,26 @@ print("Welcome to the Percent Error calculator\n")
 
 def calculate():
     exp = float(input("Please input the experimental value and press enter\n"))
-    print("Experimental value recorded as " + str(exp) +"\n")
+    if type(exp) == float:
+        print("Experimental value recorded as " + str(exp) +"\n")
 
-    the = float(input("Please input the theoretical value and press enter\n"))
-    print("Theoretical value recorded as " + str(the) + "\n")
+        the = float(input("Please input the theoretical value and press enter\n"))
+        print("Theoretical value recorded as " + str(the) + "\n")
 
-    print("This is me pretending like the computer is doing a lot of work...\n")
-    print("It's not.\n")
+        print("This is me pretending like the computer is doing a lot of work...\n")
+        print("It's not.\n")
 
-    res1 = (exp - the)
-    res2 = (res1/the)
-    res3 = (res2*100)
-    print("Percent error: " + str(res3))
+        res1 = (exp - the)
+        res2 = (res1/the)
+        res3 = (res2*100)
+        print("Percent error: " + str(res3))
+    elif type(exp) == int:
+        print "What are you even doing? Floating decimals only! No integers!"
+        return
+    elif type(exp) == str:
+        print "What are you even doing? Floating decimals only! No strings!"
+        return
+
     return
 
 def perform():

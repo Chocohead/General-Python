@@ -1,71 +1,88 @@
 __author__ = 'elijahfoster-wysocki'
 
-length=0
-volume=1
-mass=2
+import time
+
+l=0
+v=1
+m=2
+q=3
+
+def wait(seconds):
+    time.sleep(seconds)
 
 def length():
     base = float(input("What is the base unit?\n"))
     print("What conversion?\n")
-    conversion = input("Enter: kilo for meter -> kilometer, centi for meter -> centimeter, or milli for meter -> millimeter\n")
+    conversion = input("Enter: 0 for meter -> kilometer, 1 for meter -> centimeter, or 2 for meter -> millimeter\n")
 
-    if conversion == str("kilo"):
-        print str(base * 1000)
+    if conversion == 0:
+        print str(base * 1000 + "km")
 
-    if conversion == str("centi"):
-        print str(base * 0.01)
+    if conversion == 1:
+        print str(base * 0.01 + "cm")
 
-    if conversion == str("milli"):
-        print str(base * 0.001)
+    if conversion == 2:
+        print str(base * 0.001 + "mm")
 
-    return
+    print "Restarting program..."
+    wait(0.5)
+    main()
 
 def volume():
     base = float(input("What is the base unit?\n"))
     print("What conversion?\n")
-    conversion = input("Enter: kilo for liter -> kiloliter, centi for liter -> centiliter, or milli for liter -> milliliter\n")
+    conversion = input("Enter: 0 for liter -> kiloliter, 1 for liter -> centiliter, or 2 for liter -> milliliter\n")
 
-    if conversion == str("kilo"):
-        print str(base * 1000)
+    if conversion == 0:
+        print str(base * 1000 + "kL")
 
-    if conversion == str("centi"):
-        print str(base * 0.01)
+    if conversion == 1:
+        print str(base * 0.01 + "cL")
 
-    if conversion == str("milli"):
-        print str(base * 0.001)
+    if conversion == 2:
+        print str(base * 0.001 + "mL")
 
-    return
+    print "Restarting program..."
+    wait(0.5)
+    main()
 
 def mass():
     base = float(input("What is the base unit?\n"))
     print("What conversion?\n")
-    conversion = input("Enter: kilo for gram -> kilogram, centi for gram -> centigram, or milli for gram -> milligram\n")
+    conversion = input("Enter: 0 for gram -> kilogram, 1 for gram -> centigram, or 2 for gram -> milligram\n")
 
-    if conversion == str("kilo"):
-        print str(base * 1000)
+    if conversion == 0:
+        print str(base * 1000 + "kg")
 
-    if conversion == str("centi"):
-        print str(base * 0.01)
+    if conversion == 1:
+        print str(base * 0.01 + "cg")
 
-    if conversion == str("milli"):
-        print str(base * 0.001)
+    if conversion == 2:
+        print str(base * 0.001 + "mg")
 
-    return
+    print "Restarting program..."
+    wait(0.5)
+    main()
 
-def perform():
-    print("Welcome to the Metric Conversion Calculator.\n")
+def main():
     print("What property would you like to convert?\n")
-    question = int(input("Enter: 0 for length, 1 for volume, or 2 for mass\n"))
-    if question == length:
+    question = int(input("Enter: 0 for length, 1 for volume, 2 for mass, 3 to quit\n"))
+    if question==l:
         length()
-    elif question == volume:
+    if question==v:
         volume()
-    elif question == mass:
+    if question==m:
         mass()
-    else:
-        print("nigga.")
+    if question==q:
+        print "noep"
 
-    return
+print("Welcome to the Metric Conversion Calculator.\n This program will convert a base unit (gram, liter, or meter).")
+main()
 
+'''
+== CHANGELOG ==
 
-perform()
+=== 0.1 ===
+* Initial release
+
+'''
