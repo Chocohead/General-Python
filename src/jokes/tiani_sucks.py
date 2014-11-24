@@ -1,3 +1,5 @@
+# Created by Eli Foster
+
 x = float(input("Put a number in\n"))
 y = float(input("Put another number in\n"))
 

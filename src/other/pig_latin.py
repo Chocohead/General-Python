@@ -1,4 +1,4 @@
-__author__ = 'elijahfoster-wysocki'
+# Created by Eli Foster
 
 #codecademy lesson
 
